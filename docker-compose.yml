@@ -1,0 +1,7 @@
+version: "3"
+services:
+  web:
+    command: yarn run start:web
+    build: ./
+    ports:
+      - 4000:3000
