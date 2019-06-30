@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+node_modules/
+build/
+tmp/
+temp/
+dist
+.next
+.env
+*.log
+storybook-static/
+.DS_Store
+package-lock.json

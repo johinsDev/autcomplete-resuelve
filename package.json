@@ -1,0 +1,23 @@
+{
+  "name": "autcomplete-resuelve",
+  "private": true,
+  "description": "Monorepo autocomplete resuelve.",
+  "version": "0.1.0",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "lerna": "^3.13.0"
+  },
+  "author": "johinsdev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johinsDev/autcomplete-resuelve"
+  },
+  "bugs": {
+    "url": "https://github.com/johinsDev/autcomplete-resuelve/issues"
+  },
+  "homepage": "https://github.com/johinsDev/autcomplete-resuelve#readme"
+}
