@@ -3,13 +3,56 @@
   "private": true,
   "description": "Monorepo autocomplete resuelve.",
   "version": "0.1.0",
+  "scripts": {
+    "ct": "git-cz",
+    "start:web": "lerna run start --scope=@autcomplete-resuelve/web",
+    "build:web": "lerna run build --scope=@autcomplete-resuelve/web",
+    "tslint:fix": "lerna run tslint:fix --scope=@autcomplete-resuelve/web",
+    "update:web": "lerna run update --scope=@autcomplete-resuelve/web",
+    "lint:css": "stylelint './packages/**/src/**/*.{js,jsx,ts,tsx}'",
+    "update:global": "/node_modules/npm-check-updates/bin/ncu -u && yarn",
+    "test": "lerna run test:nowatch --scope=@autcomplete-resuelve/web",
+    "prettier": "prettier --write \"{,!(node_modules|dist|build|coverage)/**/}*.{js,jsx,ts,tsx,json}\"",
+    "pre-commit": "yarn run tslint:fix && yarn run prettier",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "release": "lerna publish --conventional-commits --skip-npm --yes",
+    "pre-push": "yarn run tslint:fix && yarn run prettier && yarn lint:css && yarn run test && yarn run build:web"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
     ]
   },
   "devDependencies": {
-    "lerna": "^3.13.0"
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "^2.1.0",
+    "cz-lerna-changelog": "^2.0.2",
+    "husky": "^2.7.0",
+    "lerna": "^3.15.0",
+    "lerna-semantic-release": "^9.1.0",
+    "lint-staged": "^8.2.1",
+    "npm-check-updates": "^3.1.12",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pre-commit",
+      "pre-push": "yarn pre-push"
+    }
   },
   "author": "johinsdev",
   "repository": {
