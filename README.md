@@ -12,4 +12,4 @@ fue porque el api no provee una funciona de busqueda de films y al ser tan peque
 sin embargo el componente principal tambien permite fetch hacia un api, con el tiempo se podrian mejorar la tecnica de cache, como tambien,
 hacer mad dinamico el componente autocomplete
 ## [ Link al codigo](https://github.com/johinsDev/autcomplete-resuelve/blob/master/packages/web/src/utils/useFilms.tsx)
-## [ Link al demo](https:johinsdev.com)
+## [ Link al demo](https://johinsdev.com)
