@@ -1,0 +1,29 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.modal {
+  transition: opacity 0.25s ease;
+}
+
+.modal-active {
+  overflow-x: hidden;
+  overflow-y: visible !important;
+}
+
+.border-nav {
+  border-color: #eaeaea;
+}
+
+.animate-banner {
+  animation: slide-in-y-small 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@media (min-width: 768px) {
+  .builder {
+    padding-top: 128px;
+  }
+}
