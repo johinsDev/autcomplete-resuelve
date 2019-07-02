@@ -16,7 +16,7 @@
     "pre-commit": "yarn run tslint:fix && yarn run prettier",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "release": "lerna publish --conventional-commits --skip-npm --yes",
-    "pre-push": "yarn run tslint:fix && yarn run prettier && yarn lint:css && yarn run test && yarn run build:web"
+    "pre-push": "yarn run tslint:fix && yarn run prettier && yarn lint:css && yarn run build:web"
   },
   "workspaces": {
     "packages": [

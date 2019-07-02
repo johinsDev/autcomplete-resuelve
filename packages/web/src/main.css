@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+.max-h-md {
+  max-height: 40vh;
+}
+
 .modal {
   transition: opacity 0.25s ease;
 }
